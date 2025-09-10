@@ -7,5 +7,7 @@ public class Main {
         System.out.println("Circle2 has a radius of: "+ circle2.radius);
        // System.out.println("The area of circle2 is: " + (Math.PI * circle2.radius * circle2.radius));
         System.out.println("The area of circle2 is: " + circle2.getArea());
+        System.out.println("The circumference of circle1 is " + circle1.getPerimeter());
     }
 }
+
