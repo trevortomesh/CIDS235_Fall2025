@@ -1,9 +1,10 @@
 public class Circle {
-    double radius = 1;
+    double radius;
 
     Circle(){
         //System.out.println("This is the default constructor");
         //System.out.println("No argument given -- the radius is: " + radius);
+        radius = 1.0;
     }
 
     Circle(double newRadius){
