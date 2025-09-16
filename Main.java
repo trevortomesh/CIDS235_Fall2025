@@ -1,19 +1,44 @@
 public class Main {
     public static void main(String[] args) {
+        java.util.Date date = new java.util.Date();
+        System.out.println("The elapsed time since Jan 1, 1970 is " + 
+        date.getTime() + " milliseconds");
+        System.out.println(date.toString());
 
-        Student student1 = new Student();
-        System.out.println("student1.name is : " + student1.name);
-        student1.name = "Ethan";
-        System.out.println("student1.name is : " + student1.name);
-        System.out.println("student1.wnumber is: " + student1.wnumber);
-        student1.wnumber = "w10101010";
-        System.out.println("student1.wnumber is: " + student1.wnumber);
-        System.out.println("student1.age: " + student1.age);
-        student1.age = 21;
-        System.out.println("student1.age: " + student1.age);
+        // int i = 5;
+        // int j = 2;
+        // i = j;
+        // System.out.println("i is " + i);
+        // System.out.println("j is " + j);
+
+        // //Student student1 = new Student();
+        // Circle c1 = new Circle(5);
+        // Circle c2 = new Circle(9);
+        // c1 = c2;
+
+
+        // System.out.println(c1.radius);
+        // System.out.println(c2.radius);
+
+        // c2.radius = 37;
+        // System.out.println(c1.radius);
+        // System.out.println(c2.radius);
+
+
+        // System.out.println(student1);
+
+        // System.out.println("student1.name is : " + student1.name);
+        // student1.name = "Ethan";
+        // System.out.println("student1.name is : " + student1.name);
+        // System.out.println("student1.wnumber is: " + student1.wnumber);
+        // student1.wnumber = "w10101010";
+        // System.out.println("student1.wnumber is: " + student1.wnumber);
+        // System.out.println("student1.age: " + student1.age);
+        // student1.age = 21;
+        // System.out.println("student1.age: " + student1.age);
         
-        student1.isCSMajor = true;
-        student1.sex = 'M';
+        // student1.isCSMajor = true;
+        // student1.sex = 'M';
 
 
         // Circle circle1;
