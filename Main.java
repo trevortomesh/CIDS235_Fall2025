@@ -5,6 +5,18 @@ public class Main {
         date.getTime() + " milliseconds");
         System.out.println(date.toString());
 
+        java.util.Random generator1 = new java.util.Random(215);
+        System.out.print("From generator1: ");
+            for(int i = 0; i < 10; i++){
+                System.out.print(generator1.nextInt(27) + " ");
+            }
+
+        java.util.Random generator2 = new java.util.Random(215);
+        System.out.print("\nFrom generator2: ");
+            for(int i = 0; i < 10; i++){
+                System.out.print(generator2.nextInt(1000) + " ");
+            }
+
         // int i = 5;
         // int j = 2;
         // i = j;
