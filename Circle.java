@@ -1,15 +1,17 @@
 public class Circle {
-    double radius;
-
+    double radius = 1.0;
+    static int numberOfObjects = 0;
     Circle(){
         //System.out.println("This is the default constructor");
         //System.out.println("No argument given -- the radius is: " + radius);
-        radius = 1.0;
+        numberOfObjects++;
+        
     }
 
     Circle(double newRadius){
         //System.out.println("This is the parameterized constructor");
         radius = newRadius;
+        numberOfObjects++;
     }
 
     double getArea(){
@@ -18,5 +20,9 @@ public class Circle {
 
     double getPerimeter(){
         return 2 * radius * Math.PI;
+    }
+
+    static int getNumberOfObjects(){
+        return numberOfObjects;
     }
 }
