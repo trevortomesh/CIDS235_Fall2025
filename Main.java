@@ -1,13 +1,20 @@
 public class Main {
     public static void main(String[] args) {
 
-        System.out.println(Circle.numberOfObjects);
-        Circle c1 = new Circle();
         System.out.println(Circle.getNumberOfObjects());
-        // java.util.Date date = new java.util.Date();
-        // System.out.println("The elapsed time since Jan 1, 1970 is " + 
-        // date.getTime() + " milliseconds");
-        // System.out.println(date.toString());
+
+         Circle c1 = new Circle(5.0);
+         System.out.println(c1.getArea());
+         System.out.println(c1.numberOfObjects);
+
+         Circle c2 = new Circle(3.0);
+         System.out.println(c2.getPerimeter());
+        System.out.println(c2.numberOfObjects);
+
+
+
+ 
+
 
         // java.util.Random generator1 = new java.util.Random(215);
         // System.out.print("From generator1: ");

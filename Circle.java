@@ -23,6 +23,7 @@ public class Circle {
     }
 
     static int getNumberOfObjects(){
+        System.out.println(Circle.numberOfObjects);
         return numberOfObjects;
     }
 }
