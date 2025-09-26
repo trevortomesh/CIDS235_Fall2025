@@ -1,5 +1,5 @@
 public class Circle {
-    double radius = 1.0;
+    private double radius = 1.0;
     static int numberOfObjects = 0;
     Circle(){
         //System.out.println("This is the default constructor");
@@ -25,5 +25,9 @@ public class Circle {
     static int getNumberOfObjects(){
         System.out.println(Circle.numberOfObjects);
         return numberOfObjects;
+    }
+
+    double getRadius(){
+        return radius;
     }
 }

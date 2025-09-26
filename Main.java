@@ -4,12 +4,13 @@ public class Main {
         System.out.println(Circle.getNumberOfObjects());
 
          Circle c1 = new Circle(5.0);
-         System.out.println(c1.getArea());
-         System.out.println(c1.numberOfObjects);
+         System.out.println(c1.getRadius()); 
+         //System.out.println(c1.getArea());
+        //  System.out.println(c1.numberOfObjects);
 
-         Circle c2 = new Circle(3.0);
-         System.out.println(c2.getPerimeter());
-        System.out.println(c2.numberOfObjects);
+        //  Circle c2 = new Circle(3.0);
+        //  //System.out.println(c2.getPerimeter());
+        // System.out.println(c2.numberOfObjects);
 
 
 
