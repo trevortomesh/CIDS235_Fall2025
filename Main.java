@@ -5,6 +5,13 @@ public class Main {
 
          Circle c1 = new Circle(5.0);
          System.out.println(c1.getRadius()); 
+         c1.setRadius(-12.0);
+         System.out.println("The radius of c1 is now: " + c1.getRadius());
+        //Circle.numberOfObjects = 10000;
+        System.out.println("Number of objects is now: " + Circle.getNumberOfObjects());
+        printCircle(c1);
+
+
          //System.out.println(c1.getArea());
         //  System.out.println(c1.numberOfObjects);
 
@@ -79,5 +86,11 @@ public class Main {
     //     System.out.println("The area of circle2 is: " + circle2.getArea());
     //     System.out.println("The circumference of circle1 is " + circle1.getPerimeter());
     }
+
+    public static void printCircle(Circle c){
+        System.out.println("The area of the circle of radius " 
+        + c.getRadius() + " is " + c.getArea());
+    }
+
 }
 
