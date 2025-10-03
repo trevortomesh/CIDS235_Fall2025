@@ -1,25 +1,23 @@
 public class Circle {
-    private double radius = 1.0;
+    private double radius;
     private static int numberOfObjects = 0;
+    
     public Circle(){
-        //System.out.println("This is the default constructor");
-        //System.out.println("No argument given -- the radius is: " + radius);
-        numberOfObjects++;
-        
+        this(1.0);
     }
 
-    public Circle(double newRadius){
+    public Circle(double radius){
         //System.out.println("This is the parameterized constructor");
-        radius = newRadius;
+        this.radius = radius;
         numberOfObjects++;
     }
 
     public double getArea(){
-        return Math.PI * radius * radius;
+        return Math.PI * this.radius * this.radius;
     }
 
     public double getPerimeter(){
-        return 2 * radius * Math.PI;
+        return 2 * this.radius * Math.PI;
     }
 
     
@@ -29,14 +27,14 @@ public class Circle {
     }
 
     public double getRadius(){
-        return radius;
+        return this.radius;
     }
 
-    public void setRadius(double newRadius){
-        if(newRadius > 0.0){
-            radius = newRadius;
+    public void setRadius(double radius){
+        if(radius > 0.0){
+            this.radius = radius;
         } else{
-            radius = 1.0;
+            this.radius = 1.0;
         }
     }
 
