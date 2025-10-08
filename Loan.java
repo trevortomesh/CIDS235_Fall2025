@@ -46,13 +46,15 @@ public class Loan {
     }
 
     public double getMonthlyPayment(){
-        //tbd
-        return 0;
+        double monthlyInterestRate = annualInterestRate / 1200; 
+        double monthlyPayment = loanAmount * monthlyInterestRate /
+            (1-(1/Math.pow(1+monthlyInterestRate, numberOfYears*12)));
+        return monthlyPayment;
     }
 
     public double getTotalPayment(){
-        //tbd
-        return 0;
+        double totalPayment = getMonthlyPayment() * numberOfYears * 12;
+        return totalPayment;
     }
 
 }
