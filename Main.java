@@ -2,23 +2,52 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
+        Course course1 = new Course("Programming Paradigms");
+        Course course2 = new Course("Operating Systems Programming");
 
-        Scanner input = new Scanner(System.in);
+        Student student1 = new Student("Peter Griffin");
+        Student student2 = new Student("Erik Cartman");
+        Student student3 = new Student("Bob Dylan");
+        Student student4 = new Student("Bojack Horseman");
+        Student student5 = new Student("Rick Sanchez");
+        Student student6 = new Student("Morty Smith");
 
-        System.out.print("Enter annual interest rate, for example, 8.25: ");
-        double annualInterestRate = input.nextDouble();
 
-        System.out.print("Enter number of years as an integer: ");
-        int numberOfYears = input.nextInt();
+        course1.addStudent(student1.getName());
+        course1.addStudent(student2.getName());
+        course1.addStudent(student3.getName());
 
-        System.out.print("Enter loan amount, for example, 120000.95: ");
-        double loanAmount = input.nextDouble();
+        course2.addStudent(student4.getName());
+        course2.addStudent(student5.getName());
+        course2.addStudent(student6.getName());
 
-        Loan loan = new Loan(annualInterestRate, numberOfYears, loanAmount);
+        System.out.println("Number of students in course1: " +
+        course1.getNumberOfStudents());
+        String[] students = course1.getStudents();
 
-        System.out.printf("The loan was created on %s\n" + 
-            "The monthly payment is %.2f\nThe total payment is %.2f\n",
-            loan.getLoanDate().toString(), loan.getMonthlyPayment(), loan.getTotalPayment());
+        for(int i = 0; i < course1.getNumberOfStudents(); i++){
+            System.out.print(students[i] + ", ");
+        }
+
+        System.out.println();
+        System.out.println("Number of students in course2: "
+        + course2.getNumberOfStudents());
+        // Scanner input = new Scanner(System.in);
+
+        // System.out.print("Enter annual interest rate, for example, 8.25: ");
+        // double annualInterestRate = input.nextDouble();
+
+        // System.out.print("Enter number of years as an integer: ");
+        // int numberOfYears = input.nextInt();
+
+        // System.out.print("Enter loan amount, for example, 120000.95: ");
+        // double loanAmount = input.nextDouble();
+
+        // Loan loan = new Loan(annualInterestRate, numberOfYears, loanAmount);
+
+        // System.out.printf("The loan was created on %s\n" + 
+        //     "The monthly payment is %.2f\nThe total payment is %.2f\n",
+        //     loan.getLoanDate().toString(), loan.getMonthlyPayment(), loan.getTotalPayment());
 
         // Circle c1 = new Circle(3.2);
 

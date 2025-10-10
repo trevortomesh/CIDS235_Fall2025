@@ -1,8 +1,23 @@
 public class Student {
-    String name;
-    String wnumber;
-    int age;
-    boolean isCSMajor;
-    char sex;
+    private Course[] courseList;
+
+    private Name name;
+    private Address[] addresses;
+
+    Student(String name){
+        this.name.setName(name);
+    }
+
+    public String getName(){
+        return this.name.getName();
+    }
+
+    public void addCourse(Course c){
+        // do stuff here
+    }
+
+    public void addAddress(Address a){
+        // do stuff here
+    }
 
 }
