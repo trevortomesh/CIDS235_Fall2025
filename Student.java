@@ -5,6 +5,7 @@ public class Student {
     private Address[] addresses;
 
     Student(String name){
+        this.name = new Name();
         this.name.setName(name);
     }
 
