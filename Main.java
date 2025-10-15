@@ -1,37 +1,71 @@
 import java.util.Scanner;
+import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
 
-        Course course1 = new Course("Programming Paradigms");
-        Course course2 = new Course("Operating Systems Programming");
+        ArrayList<String> cityList = new ArrayList<>();
 
-        Student student1 = new Student("Peter Griffin");
-        Student student2 = new Student("Erik Cartman");
-        Student student3 = new Student("Bob Dylan");
-        Student student4 = new Student("Bojack Horseman");
-        Student student5 = new Student("Rick Sanchez");
-        Student student6 = new Student("Morty Smith");
+        cityList.add("Milwaukee");
+        cityList.add("Cameron");
+        cityList.add("Hudson");
+        cityList.add("Prior Lake");
+        cityList.add("Shokopee");
+        cityList.remove("Cameron");
+
+        System.out.println(cityList);
+
+        // Integer x1 = 32;
+        // System.out.println(x1.doubleValue());       
+        // System.out.println(x1); 
+
+        //System.out.println(x.getValue());
+        // StackOfIntegers stack = new StackOfIntegers();
+        // System.out.println(stack.empty());
 
 
-        course1.addStudent(student1.getName());
-        course1.addStudent(student2.getName());
-        course1.addStudent(student3.getName());
+        // for(int i = 0; i < 10; i++){
+        //     stack.push(i);
+        // }
+        // System.out.println("Is empty? " + stack.empty());
+        // System.out.println(stack.peek());
 
-        course2.addStudent(student4.getName());
-        course2.addStudent(student5.getName());
-        course2.addStudent(student6.getName());
+        //  while(!stack.empty()){
+        //      System.out.print(stack.pop());
+        //  }
 
-        System.out.println("Number of students in course1: " +
-        course1.getNumberOfStudents());
-        String[] students = course1.getStudents();
+        //  System.out.println(stack.empty());
 
-        for(int i = 0; i < course1.getNumberOfStudents(); i++){
-            System.out.print(students[i] + ", ");
-        }
+        //  System.out.println(stack.peek());
+        // Course course1 = new Course("Programming Paradigms");
+        // Course course2 = new Course("Operating Systems Programming");
 
-        System.out.println();
-        System.out.println("Number of students in course2: "
-        + course2.getNumberOfStudents());
+        // Student student1 = new Student("Peter Griffin");
+        // Student student2 = new Student("Erik Cartman");
+        // Student student3 = new Student("Bob Dylan");
+        // Student student4 = new Student("Bojack Horseman");
+        // Student student5 = new Student("Rick Sanchez");
+        // Student student6 = new Student("Morty Smith");
+
+
+        // course1.addStudent(student1.getName());
+        // course1.addStudent(student2.getName());
+        // course1.addStudent(student3.getName());
+
+        // course2.addStudent(student4.getName());
+        // course2.addStudent(student5.getName());
+        // course2.addStudent(student6.getName());
+
+        // System.out.println("Number of students in course1: " +
+        // course1.getNumberOfStudents());
+        // String[] students = course1.getStudents();
+
+        // for(int i = 0; i < course1.getNumberOfStudents(); i++){
+        //     System.out.print(students[i] + ", ");
+        // }
+
+        // System.out.println();
+        // System.out.println("Number of students in course2: "
+        // + course2.getNumberOfStudents());
         // Scanner input = new Scanner(System.in);
 
         // System.out.print("Enter annual interest rate, for example, 8.25: ");
