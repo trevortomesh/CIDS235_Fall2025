@@ -3,16 +3,53 @@ import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
 
-        ArrayList<String> cityList = new ArrayList<>();
+        String s1 = "It's string time!";
+        String s2 = "It's string time again!";
+        String s3 = "it's string time again!";
 
-        cityList.add("Milwaukee");
-        cityList.add("Cameron");
-        cityList.add("Hudson");
-        cityList.add("Prior Lake");
-        cityList.add("Shokopee");
-        cityList.remove("Cameron");
+        String s4 = "Java";
+        s4 = "HTML";
 
-        System.out.println(cityList);
+        System.out.println(s4);
+        //System.out.println(s1.charAt(3));
+        System.out.println(s2.compareToIgnoreCase(s3));
+
+        String s5 = "This is Halloween!";
+        String s6 = new String("Have a Holly Jolly Christmas!");
+        String s7 = "This is Halloween!";
+        String s8 = new String("Have a Holly Jolly Christmas!");
+
+        System.out.println(s5 == s7);
+        System.out.println(s6 == s8);
+
+
+        // ArrayList<Circle> list = new ArrayList<>();
+        // list.add(new Circle(2));
+        // list.add(new Circle(3));
+
+        // for(int i = 0; i < 10; i++){
+        //     list.add(new Circle(i+1));
+        // }
+
+        // for(int i = 0; i < list.size(); i++){
+        //     System.out.println("Area is: " + list.get(i).getArea());
+        // }
+    
+
+        // ArrayList<String> cityList = new ArrayList<>();
+
+        // cityList.add("Milwaukee");
+        // cityList.add("Cameron");
+        // cityList.add("Hudson");
+        // cityList.add("Prior Lake");
+        // cityList.add("Shokopee");
+        // cityList.remove("Cameron");
+
+        // System.out.println(cityList);
+
+        // System.out.println(cityList.get(0));
+        // System.out.println(cityList.contains("Barron"));
+        // System.out.println(cityList.size());
 
         // Integer x1 = 32;
         // System.out.println(x1.doubleValue());       
@@ -104,6 +141,8 @@ public class Main {
         // printCircleArray(circleArray);
      
 }
+
+
 
     public static void myMethod(int i){
         i = 99;
