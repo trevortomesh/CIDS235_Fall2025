@@ -1,4 +1,4 @@
-public class Circle {
+public class Circle extends GeometricObject {
     private double radius;
     private static int numberOfObjects = 0;
     

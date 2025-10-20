@@ -3,6 +3,9 @@ import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
 
+        Circle circle1 = new Circle();
+        circle1.getColor();
+
         String s1 = "It's string time!";
         String s2 = "It's string time again!";
         String s3 = "it's string time again!";
