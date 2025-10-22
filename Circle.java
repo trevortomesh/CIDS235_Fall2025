@@ -12,6 +12,11 @@ public class Circle extends GeometricObject {
         numberOfObjects++;
     }
 
+    public Circle(double radius, String color, boolean filled){
+        super(color, filled);
+        this.radius = radius;
+    }
+
     public double getArea(){
         return Math.PI * this.radius * this.radius;
     }

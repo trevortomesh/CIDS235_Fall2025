@@ -3,27 +3,30 @@ import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
 
-        Circle circle1 = new Circle();
-        circle1.getColor();
+        Rectangle r1 = new Rectangle(2,4,"Blue",true);
+        System.out.println(r1.toString());
+        System.out.println(r1.getArea());
+        // Circle circle1 = new Circle();
+        // System.out.println(circle1.getColor());
 
-        String s1 = "It's string time!";
-        String s2 = "It's string time again!";
-        String s3 = "it's string time again!";
+        // String s1 = "It's string time!";
+        // String s2 = "It's string time again!";
+        // String s3 = "it's string time again!";
 
-        String s4 = "Java";
-        s4 = "HTML";
+        // String s4 = "Java";
+        // s4 = "HTML";
 
-        System.out.println(s4);
-        //System.out.println(s1.charAt(3));
-        System.out.println(s2.compareToIgnoreCase(s3));
+        // System.out.println(s4);
+        // //System.out.println(s1.charAt(3));
+        // System.out.println(s2.compareToIgnoreCase(s3));
 
-        String s5 = "This is Halloween!";
-        String s6 = new String("Have a Holly Jolly Christmas!");
-        String s7 = "This is Halloween!";
-        String s8 = new String("Have a Holly Jolly Christmas!");
+        // String s5 = "This is Halloween!";
+        // String s6 = new String("Have a Holly Jolly Christmas!");
+        // String s7 = "This is Halloween!";
+        // String s8 = new String("Have a Holly Jolly Christmas!");
 
-        System.out.println(s5 == s7);
-        System.out.println(s6 == s8);
+        // System.out.println(s5 == s7);
+        // System.out.println(s6 == s8);
 
 
         // ArrayList<Circle> list = new ArrayList<>();
