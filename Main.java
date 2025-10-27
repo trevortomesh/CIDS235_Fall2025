@@ -3,9 +3,10 @@ import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
 
-        Rectangle r1 = new Rectangle(2,4,"Blue",true);
-        System.out.println(r1.toString());
-        System.out.println(r1.getArea());
+        Faculty drt = new Faculty();
+        // Rectangle r1 = new Rectangle(2,4,"Blue",true);
+        // System.out.println(r1.toString());
+        // System.out.println(r1.getArea());
         // Circle circle1 = new Circle();
         // System.out.println(circle1.getColor());
 
