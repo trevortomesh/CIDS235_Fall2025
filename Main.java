@@ -3,7 +3,16 @@ import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
 
-        Faculty drt = new Faculty();
+        Circle bob = new Circle(7.0);
+        System.out.println(bob.toString());
+        Person steve = new Person();
+        System.out.println(steve.toString());
+        //Circle joe = bob;
+       // System.out.println(joe.equals(bob));
+
+        //bob.printCircle();
+        //System.out.println(bob.toString());
+        //Faculty drt = new Faculty();
         // Rectangle r1 = new Rectangle(2,4,"Blue",true);
         // System.out.println(r1.toString());
         // System.out.println(r1.getArea());
