@@ -4,9 +4,15 @@ public class Main {
     public static void main(String[] args) {
 
         Circle bob = new Circle(7.0);
-        System.out.println(bob.toString());
-        Person steve = new Person();
-        System.out.println(steve.toString());
+        Rectangle steve = new Rectangle();
+
+        displayGeoObject(bob);
+        displayGeoObject(steve);
+
+
+       // System.out.println(bob.toString());
+        //Person steve = new Person();
+        //System.out.println(steve.toString());
         //Circle joe = bob;
        // System.out.println(joe.equals(bob));
 
@@ -183,6 +189,13 @@ public class Main {
         System.out.println("The area of the circle of radius " 
         + c.getRadius() + " is " + c.getArea());
         c.setRadius(12.0);
+    }
+
+    public static void displayGeoObject(GeometricObject object){
+        System.out.println("Created on " + object.getDateCreated() +
+            ". Color is " + object.getColor());
+
+        //System.out.println(object.getRadius());
     }
 
 }
