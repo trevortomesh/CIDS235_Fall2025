@@ -3,11 +3,23 @@ import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
 
-        Circle bob = new Circle(7.0);
-        Rectangle steve = new Rectangle();
+        m(new GraduateStudent());
+        m(new Student());
+        m(new Person());
+        m(new Object());
+        // Object myObject = new Circle();
+        // //System.out.println(nullGuy);
 
-        displayGeoObject(bob);
-        displayGeoObject(steve);
+        // Object o = new GeometricObject();
+        // System.out.println(myObject.toString());
+
+        //GeometricObject g = new Object();
+
+        // Circle bob = new Circle(7.0);
+        // Rectangle steve = new Rectangle();
+
+        // displayGeoObject(bob);
+        // displayGeoObject(steve);
 
 
        // System.out.println(bob.toString());
@@ -165,6 +177,9 @@ public class Main {
 }
 
 
+    public static void m(Object x){
+        System.out.println(x.toString());
+    }
 
     public static void myMethod(int i){
         i = 99;

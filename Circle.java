@@ -48,6 +48,7 @@ public class Circle extends GeometricObject {
         super.getDateCreated() + " and the radius is " + radius);
     }
 
+    @Override
     public String toString(){
         return super.toString() + "\nradius is " + radius;
     }

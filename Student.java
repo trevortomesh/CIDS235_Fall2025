@@ -1,24 +1,29 @@
-public class Student {
+public class Student extends Person {
     private Course[] courseList;
 
-    private Name name;
-    private Address[] addresses;
-
-    Student(String name){
-        this.name = new Name();
-        this.name.setName(name);
+    @Override
+    public String toString(){
+        return "student";
     }
 
-    public String getName(){
-        return this.name.getName();
-    }
+    // private Name name;
+    // private Address[] addresses;
 
-    public void addCourse(Course c){
-        // do stuff here
-    }
+    // Student(String name){
+    //     this.name = new Name();
+    //     this.name.setName(name);
+    // }
 
-    public void addAddress(Address a){
-        // do stuff here
-    }
+    // public String getName(){
+    //     return this.name.getName();
+    // }
+
+    // public void addCourse(Course c){
+    //     // do stuff here
+    // }
+
+    // public void addAddress(Address a){
+    //     // do stuff here
+    // }
 
 }
