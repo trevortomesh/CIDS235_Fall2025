@@ -3,11 +3,27 @@ import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
 
-        m(new GraduateStudent());
-        m(new Student());
-        m(new Person());
-        m(new Object());
-        // Object myObject = new Circle();
+        Circle myCircle = new Circle(12);
+        Rectangle recty = new Rectangle(6,7);
+        displayGeoObject(myCircle);
+        displayGeoObject(recty);
+
+        // m(new GraduateStudent());
+        // m(new Student());
+        // m(new Person());
+        // m(new Object());
+
+        // Object o = new Student();
+        // Student b = (Student) o;
+
+        // double x = 5.2;
+        // int y = (int) x;
+        // System.out.println(x);
+        // System.out.println(y);
+
+
+
+         //Object myObject = new Circle();
         // //System.out.println(nullGuy);
 
         // Object o = new GeometricObject();
@@ -210,7 +226,10 @@ public class Main {
         System.out.println("Created on " + object.getDateCreated() +
             ". Color is " + object.getColor());
 
-        //System.out.println(object.getRadius());
+        if(object instanceof Circle){
+            System.out.println("The circle area is " + 
+            ((Circle)object).getArea());
+        }
     }
 
 }
