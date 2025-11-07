@@ -3,11 +3,34 @@ import java.util.ArrayList;
 public class Main {
     public static void main(String[] args) {
 
-        Circle myCircle = new Circle(12);
-        Rectangle recty = new Rectangle(6,7);
-        displayGeoObject(myCircle);
-        displayGeoObject(recty);
 
+        int age = 45;
+        byte newAge = (byte)age;
+        System.out.println(newAge);
+
+        Object o = new Circle();
+        Circle c = (Circle)o; 
+        Circle d = new Circle(3.2);
+        System.out.println(o.equals(c));
+        c.setRadius(25);
+        System.out.println(c.equals(o));
+        System.out.println(c.equals(d));
+
+        // Circle myCircle = new Circle(12);
+        // Rectangle recty = new Rectangle(6,7);
+        // Object myObject;
+        // Student s = new Student();
+        // Circle c = new Circle();
+        // myObject = c;
+        // displayObject(myObject);
+        // displayObject(s);
+        // displayObject(recty);
+
+        // displayGeoObject((GeometricObject)myObject);
+        // displayGeoObject(myCircle);
+        // displayGeoObject(recty);
+
+        /* OLD CODE -------------------------------------
         // m(new GraduateStudent());
         // m(new Student());
         // m(new Person());
@@ -189,9 +212,24 @@ public class Main {
         // System.out.println(circleArray[0].getRadius());
 
         // printCircleArray(circleArray);
-     
+     */
+
 }
 
+
+    public static void displayObject(Object object){
+        if(object instanceof Circle){
+            System.out.println("The cirle area is " + 
+            ((Circle)object).getArea());
+            System.out.println("The circle diameter is " + 
+            ((Circle)object).getRadius()*2);
+        }else if(object instanceof Rectangle){
+            System.out.println("The rectangle area is " + 
+            ((Rectangle)object).getArea());
+        }else{
+            System.out.println(object.toString());
+        }
+    }
 
     public static void m(Object x){
         System.out.println(x.toString());
@@ -228,9 +266,14 @@ public class Main {
 
         if(object instanceof Circle){
             System.out.println("The circle area is " + 
-            ((Circle)object).getArea());
+            ((Circle)object).getArea() + " radius is " + 
+            ((Circle)object).getRadius());
         }
     }
+
+    // public boolean equals(Object obj){
+    //     return this == obj;
+    // }
 
 }
 

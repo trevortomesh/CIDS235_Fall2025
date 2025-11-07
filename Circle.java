@@ -53,5 +53,14 @@ public class Circle extends GeometricObject {
         return super.toString() + "\nradius is " + radius;
     }
 
+    @Override
+    public boolean equals(Object o){
+        if(o instanceof Circle){
+            return this.radius == ((Circle)o).radius;
+        }else{
+            return false;
+        }
+    }
+
 
 }
