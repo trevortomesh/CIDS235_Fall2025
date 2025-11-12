@@ -1,20 +1,27 @@
 import java.util.Scanner;
 import java.util.ArrayList;
-public class Main {
+public final class Main {
     public static void main(String[] args) {
 
+        GeometricObject geoObject1 = new Circle(5);
+        GeometricObject geoObject2 = new Rectangle(5,3);
+        System.out.println(equalArea(geoObject1, geoObject2));
 
-        int age = 45;
-        byte newAge = (byte)age;
-        System.out.println(newAge);
 
-        Object o = new Circle();
-        Circle c = (Circle)o; 
-        Circle d = new Circle(3.2);
-        System.out.println(o.equals(c));
-        c.setRadius(25);
-        System.out.println(c.equals(o));
-        System.out.println(c.equals(d));
+        // GeometricObject thingie = new GeometricObject();
+        // System.out.println(thingie.toString());
+
+        // int age = 45;
+        // byte newAge = (byte)age;
+        // System.out.println(newAge);
+
+        // Object o = new Circle();
+        // Circle c = (Circle)o; 
+        // Circle d = new Circle(3.2);
+        // System.out.println(o.equals(c));
+        // c.setRadius(25);
+        // System.out.println(c.equals(o));
+        // System.out.println(c.equals(d));
 
         // Circle myCircle = new Circle(12);
         // Rectangle recty = new Rectangle(6,7);
@@ -216,6 +223,11 @@ public class Main {
 
 }
 
+
+    public static boolean equalArea(GeometricObject object1, 
+    GeometricObject object2){
+        return object1.getArea() == object2.getArea();
+    }
 
     public static void displayObject(Object object){
         if(object instanceof Circle){
