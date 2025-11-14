@@ -64,5 +64,7 @@ public class Circle extends GeometricObject {
         }
     }
 
+    //public abstract void test();
+
 
 }

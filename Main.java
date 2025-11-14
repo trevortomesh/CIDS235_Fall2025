@@ -7,6 +7,14 @@ public final class Main {
         GeometricObject geoObject2 = new Rectangle(5,3);
         System.out.println(equalArea(geoObject1, geoObject2));
 
+        GeometricObject[] objects = new GeometricObject[10];
+        objects[0] = new Circle();
+
+        Integer x = 5;
+        Double y = 3.2;
+        System.out.println(x.floatValue());
+        System.out.println(y.floatValue());
+
 
         // GeometricObject thingie = new GeometricObject();
         // System.out.println(thingie.toString());
