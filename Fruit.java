@@ -1,3 +1,3 @@
-abstract public class Fruit {
+abstract public class Fruit implements Edible{
     
 }

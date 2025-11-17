@@ -3,17 +3,43 @@ import java.util.ArrayList;
 public final class Main {
     public static void main(String[] args) {
 
-        GeometricObject geoObject1 = new Circle(5);
-        GeometricObject geoObject2 = new Rectangle(5,3);
-        System.out.println(equalArea(geoObject1, geoObject2));
 
-        GeometricObject[] objects = new GeometricObject[10];
-        objects[0] = new Circle();
+        String[] cities = {"Savannah", "Boston", "Atlanta", "Tampa"};
 
-        Integer x = 5;
-        Double y = 3.2;
-        System.out.println(x.floatValue());
-        System.out.println(y.floatValue());
+        java.util.Arrays.sort(cities);
+        for(String city: cities){
+            System.out.print(city+ " ");
+        System.out.println();    
+        }
+
+        // Object[] objects = {new Tiger(), new Chicken(), new Apple()};
+
+        // for(int i = 0; i < objects.length; i++){
+        //     if(objects[i] instanceof Edible){
+        //         System.out.println(((Edible)objects[i]).howToEat());
+        //     }
+
+        //     if(objects[i] instanceof Animal){
+        //         System.out.println(((Animal)objects[i]).sound());
+        //     }
+        // }
+
+        // objects[0] = new Tiger();
+        // objects[1] = new Chicken();
+        // objects[2] = new Apple();
+
+
+        // GeometricObject geoObject1 = new Circle(5);
+        // GeometricObject geoObject2 = new Rectangle(5,3);
+        // System.out.println(equalArea(geoObject1, geoObject2));
+
+        // GeometricObject[] objects = new GeometricObject[10];
+        // objects[0] = new Circle();
+
+        // Integer x = 5;
+        // Double y = 3.2;
+        // System.out.println(x.floatValue());
+        // System.out.println(y.floatValue());
 
 
         // GeometricObject thingie = new GeometricObject();
