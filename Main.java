@@ -4,13 +4,54 @@ public final class Main {
     public static void main(String[] args) {
 
 
-        String[] cities = {"Savannah", "Boston", "Atlanta", "Tampa"};
+            GeometricObject o1 = new ComparableRectangle(3.4,5.4);
+            GeometricObject o2 = new ComparableRectangle(13.24, 55.4);
+            GeometricObject o3 = new ComparableRectangle(7.4, 35.4);
+            GeometricObject o4 = new ComparableRectangle(1.4, 25.4);
+            GeometricObject o5 = new ComparableCircle(40.4);
+            GeometricObject o6 = new ComparableCircle(8);
+            GeometricObject o7 = new ComparableCircle(35);
+            GeometricObject o8 = new ComparableCircle(17.2);
+            GeometricObject[] geoObs = {o1,o2,o3,o4,o5,o6,o7,o8};
 
-        java.util.Arrays.sort(cities);
-        for(String city: cities){
-            System.out.print(city+ " ");
-        System.out.println();    
-        }
+            java.util.Arrays.sort(geoObs);
+            for(GeometricObject ob : geoObs){
+                System.out.println(ob);
+            }
+
+        // ComparableRectangle[] rectangles = {
+        //     new ComparableRectangle(3.4,5.4),
+        //     new ComparableRectangle(13.24, 55.4),
+        //     new ComparableRectangle(7.4, 35.4),
+        //     new ComparableRectangle(1.4, 25.4)
+        // };
+
+        // java.util.Arrays.sort(rectangles);
+        // for(Rectangle rectangle:rectangles){
+        //     System.out.print(rectangle + " ");
+        //     System.out.println();
+        // }
+
+        // ComparableCircle[] circles = {
+        //     new ComparableCircle(40.4),
+        //     new ComparableCircle(8),
+        //     new ComparableCircle(35),
+        //     new ComparableCircle(17.2)
+        // };
+
+        // java.util.Arrays.sort(circles);
+        // for(Circle circle : circles){
+        //     System.out.print(circle + " ");
+        //     System.out.println();
+        // }
+
+        // String[] cities = {"Savannah", "Boston", "Atlanta", "Tampa"};
+
+        // java.util.Arrays.sort(cities);
+        // for(String city: cities){
+        //     System.out.print(city+ " ");
+        // System.out.println();    
+        // }
 
         // Object[] objects = {new Tiger(), new Chicken(), new Apple()};
 
