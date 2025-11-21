@@ -1,23 +1,41 @@
 import java.util.Scanner;
 import java.util.ArrayList;
+import java.util.GregorianCalendar;
+import java.util.Calendar;
 public final class Main {
     public static void main(String[] args) {
 
 
-            GeometricObject o1 = new ComparableRectangle(3.4,5.4);
-            GeometricObject o2 = new ComparableRectangle(13.24, 55.4);
-            GeometricObject o3 = new ComparableRectangle(7.4, 35.4);
-            GeometricObject o4 = new ComparableRectangle(1.4, 25.4);
-            GeometricObject o5 = new ComparableCircle(40.4);
-            GeometricObject o6 = new ComparableCircle(8);
-            GeometricObject o7 = new ComparableCircle(35);
-            GeometricObject o8 = new ComparableCircle(17.2);
-            GeometricObject[] geoObs = {o1,o2,o3,o4,o5,o6,o7,o8};
+        House house1 = new House(1, 2000);
+        House house2 = (House)house1.clone();
+        System.out.println(house2.getArea());
 
-            java.util.Arrays.sort(geoObs);
-            for(GeometricObject ob : geoObs){
-                System.out.println(ob);
-            }
+        // Calendar calendar = new GregorianCalendar(2025, 11, 1);
+        // Calendar calendar1 = calendar;
+        // Calendar calendar2 = (Calendar)calendar.clone();
+
+        // System.out.println("calendar == calendar1 is " + (calendar == calendar1));
+        // System.out.println("calendar == calendar2 is " + (calendar == calendar2));
+        // System.out.println("calendar.equals(calendar2) is " + calendar.equals(calendar2));
+
+
+
+            // GeometricObject o1 = new ComparableRectangle(3.4,5.4);
+            // GeometricObject o2 = new ComparableRectangle(13.24, 55.4);
+            // GeometricObject o3 = new ComparableRectangle(7.4, 35.4);
+            // GeometricObject o4 = new ComparableRectangle(1.4, 25.4);
+            // GeometricObject o5 = new ComparableCircle(40.4);
+            // GeometricObject o6 = new ComparableCircle(8);
+            // GeometricObject o7 = new ComparableCircle(35);
+            // GeometricObject o8 = new ComparableCircle(17.2);
+            // GeometricObject[] geoObs = {o1,o2,o3,o4,o5,o6,o7,o8};
+   
+
+
+            // java.util.Arrays.sort(geoObs);
+            // for(GeometricObject ob : geoObs){
+            //     System.out.println(ob);
+            // }
 
         // ComparableRectangle[] rectangles = {
         //     new ComparableRectangle(3.4,5.4),
