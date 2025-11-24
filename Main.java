@@ -5,10 +5,20 @@ import java.util.Calendar;
 public final class Main {
     public static void main(String[] args) {
 
+        Animal animal = new Chicken();
+        eat(animal);
 
-        House house1 = new House(1, 2000);
-        House house2 = (House)house1.clone();
-        System.out.println(house2.getArea());
+        animal = new Duck();
+        eat(animal);
+
+        animal = new Tiger();
+        eat(animal);
+
+
+
+        // House house1 = new House(1, 2000);
+        // House house2 = (House)house1.clone();
+        // System.out.println(house2.getArea());
 
         // Calendar calendar = new GregorianCalendar(2025, 11, 1);
         // Calendar calendar1 = calendar;
@@ -315,6 +325,10 @@ public final class Main {
      */
 
 }
+
+    public static void eat(Animal animal){
+        System.out.println(animal.howToEat());
+    }
 
 
     public static boolean equalArea(GeometricObject object1, 

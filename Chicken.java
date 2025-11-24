@@ -1,4 +1,4 @@
-public class Chicken extends Animal implements Edible{
+public class Chicken extends Animal{
     @Override
     public String sound(){
         return "cock-a-doodle-doo!";
