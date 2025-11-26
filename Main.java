@@ -5,14 +5,52 @@ import java.util.Calendar;
 public final class Main {
     public static void main(String[] args) {
 
-        Animal animal = new Chicken();
-        eat(animal);
 
-        animal = new Duck();
-        eat(animal);
+        Box<String> message = new Box<>("Hello!");
+        Box<Integer> number = new Box<>(99);
 
-        animal = new Tiger();
-        eat(animal);
+        System.out.println(message.get());
+        System.out.println(number.get());
+
+        Pair<Integer,String> pair = new Pair<>(1, "Bulbasaur");
+        System.out.println(pair.toString());
+
+        Circle newCircle = new Circle(10);
+        printTwice(pair);
+        printTwice(newCircle);
+
+        Integer[] myIntArray = {1,2,3,4,5};
+        Double[] myDubArray = {1.0, 2.0, 3.0, 4.0};
+
+        swap(myIntArray, 2 , 3);
+        swap(myDubArray, 0,3);
+        for(int i = 0; i < myDubArray.length; i++){
+            System.out.println(myDubArray[i]);
+        }
+
+        Integer x = 12;
+        Double y = 13.0;
+        System.out.println(sum(x, y));
+
+        // ArrayList<String> names = new ArrayList<>();
+        // names.add("Alice");
+        // //names.add(12);
+        // System.out.println(names);
+
+        //  ArrayList list = new ArrayList();
+        //  list.add("Hello");
+        //  list.add(42);
+
+        // String s = (String) list.get(1);
+        //  System.out.println(s);
+        // Animal animal = new Chicken();
+        // eat(animal);
+
+        // animal = new Duck();
+        // eat(animal);
+
+        // animal = new Tiger();
+        // eat(animal);
 
 
 
@@ -325,6 +363,26 @@ public final class Main {
      */
 
 }
+
+
+    public static <T extends Number & Comparable<T>> void compareValues(T a, T b){
+        System.out.println(a.compareTo(b));
+    }
+    public static <T extends Number> double sum(T a, T b){
+        return a.doubleValue() + b.doubleValue();
+    }
+
+    public static <T> void swap(T[] array, int i, int j){
+        T temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
+
+
+    public static <T> void printTwice(T item){
+        System.out.println(item);
+        System.out.println(item);
+    }
 
     public static void eat(Animal animal){
         System.out.println(animal.howToEat());
