@@ -1,10 +1,18 @@
 import java.util.Scanner;
 import java.util.ArrayList;
 import java.util.GregorianCalendar;
+import java.util.List;
 import java.util.Calendar;
 public final class Main {
     public static void main(String[] args) {
 
+
+        // List<Dog> is NOT a subtype of List<Animal>
+
+        ArrayList<String> list = new ArrayList<>();
+        ArrayList<Integer> test; 
+        //Box[] arr = new Box[10];
+        //Box box = new Box();
 
         Box<String> message = new Box<>("Hello!");
         Box<Integer> number = new Box<>(99);
@@ -31,6 +39,17 @@ public final class Main {
         Integer x = 12;
         Double y = 13.0;
         System.out.println(sum(x, y));
+
+        String s = identity("Hello");
+        Integer n = identity(42);
+
+        System.out.println(s);
+        System.out.println(n);
+        Box2<String> b = new Box2<>("Hi!");
+        String s2 = b.get();
+
+        Box2<Integer> c = new Box2<>(99);
+        int x2 = c.get();
 
         // ArrayList<String> names = new ArrayList<>();
         // names.add("Alice");
@@ -362,14 +381,41 @@ public final class Main {
         // printCircleArray(circleArray);
      */
 
+        process(new ArrayList<Integer>());
+
 }
 
+
+    void sum(List<? extends Number> nums){
+        for (Number n : nums){
+
+        }
+    }
+
+    void addNumbers(List<? super Integer> list){
+        list.add(1);
+        list.add(2);
+    }
+
+    public static void process(List<?> nums){
+
+    }
+
+    public void printList(List<?> list){
+        for (Object o : list){
+            System.out.println(o);
+        }
+    }
 
     public static <T extends Number & Comparable<T>> void compareValues(T a, T b){
         System.out.println(a.compareTo(b));
     }
     public static <T extends Number> double sum(T a, T b){
         return a.doubleValue() + b.doubleValue();
+    }
+
+    public static <T> T identity(T value){
+        return value;
     }
 
     public static <T> void swap(T[] array, int i, int j){
