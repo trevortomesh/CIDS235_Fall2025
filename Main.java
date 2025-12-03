@@ -1,55 +1,77 @@
 import java.util.Scanner;
+import java.util.stream.Stream;
 import java.util.ArrayList;
 import java.util.GregorianCalendar;
 import java.util.List;
 import java.util.Calendar;
 public final class Main {
+
+    int total = 0;
     public static void main(String[] args) {
+
+
+        List<Integer> nums = new ArrayList<>();
+        System.out.println(nums);
+        nums.add(1);
+        System.out.println(nums);
+
+        List<Integer> nums2 = List.of(1,2,3);
+        List<Integer> more = Stream.concat(nums2.stream(), Stream.of(4)).toList();
+        System.out.println(more);
+        System.out.println(nums2);
+        // int x = 5; 
+        // x = x + 1;
+        // System.out.println("x is now: " + x);
+
+        // int a = 5;
+        // int b = a + 1;
+        // System.out.println("a is now " + a);
+        // System.out.println("b is now " + b);
 
 
         // List<Dog> is NOT a subtype of List<Animal>
 
-        ArrayList<String> list = new ArrayList<>();
-        ArrayList<Integer> test; 
-        //Box[] arr = new Box[10];
-        //Box box = new Box();
+        // ArrayList<String> list = new ArrayList<>();
+        // ArrayList<Integer> test; 
+        // //Box[] arr = new Box[10];
+        // //Box box = new Box();
 
-        Box<String> message = new Box<>("Hello!");
-        Box<Integer> number = new Box<>(99);
+        // Box<String> message = new Box<>("Hello!");
+        // Box<Integer> number = new Box<>(99);
 
-        System.out.println(message.get());
-        System.out.println(number.get());
+        // System.out.println(message.get());
+        // System.out.println(number.get());
 
-        Pair<Integer,String> pair = new Pair<>(1, "Bulbasaur");
-        System.out.println(pair.toString());
+        // Pair<Integer,String> pair = new Pair<>(1, "Bulbasaur");
+        // System.out.println(pair.toString());
 
-        Circle newCircle = new Circle(10);
-        printTwice(pair);
-        printTwice(newCircle);
+        // Circle newCircle = new Circle(10);
+        // printTwice(pair);
+        // printTwice(newCircle);
 
-        Integer[] myIntArray = {1,2,3,4,5};
-        Double[] myDubArray = {1.0, 2.0, 3.0, 4.0};
+        // Integer[] myIntArray = {1,2,3,4,5};
+        // Double[] myDubArray = {1.0, 2.0, 3.0, 4.0};
 
-        swap(myIntArray, 2 , 3);
-        swap(myDubArray, 0,3);
-        for(int i = 0; i < myDubArray.length; i++){
-            System.out.println(myDubArray[i]);
-        }
+        // swap(myIntArray, 2 , 3);
+        // swap(myDubArray, 0,3);
+        // for(int i = 0; i < myDubArray.length; i++){
+        //     System.out.println(myDubArray[i]);
+        // }
 
-        Integer x = 12;
-        Double y = 13.0;
-        System.out.println(sum(x, y));
+        // Integer x = 12;
+        // Double y = 13.0;
+        // System.out.println(sum(x, y));
 
-        String s = identity("Hello");
-        Integer n = identity(42);
+        // String s = identity("Hello");
+        // Integer n = identity(42);
 
-        System.out.println(s);
-        System.out.println(n);
-        Box2<String> b = new Box2<>("Hi!");
-        String s2 = b.get();
+        // System.out.println(s);
+        // System.out.println(n);
+        // Box2<String> b = new Box2<>("Hi!");
+        // String s2 = b.get();
 
-        Box2<Integer> c = new Box2<>(99);
-        int x2 = c.get();
+        // Box2<Integer> c = new Box2<>(99);
+        // int x2 = c.get();
 
         // ArrayList<String> names = new ArrayList<>();
         // names.add("Alice");
@@ -381,9 +403,20 @@ public final class Main {
         // printCircleArray(circleArray);
      */
 
-        process(new ArrayList<Integer>());
+
+        //process(new ArrayList<Integer>());
 
 }
+
+
+        int square(int x){
+            return x*x;
+        }
+
+        int addToTotal(int x){
+            total += x;
+            return total;
+        }
 
 
     void sum(List<? extends Number> nums){
