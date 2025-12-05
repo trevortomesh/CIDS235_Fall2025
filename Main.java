@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.function.Function;
 import java.util.stream.Stream;
 import java.util.ArrayList;
 import java.util.GregorianCalendar;
@@ -10,15 +11,50 @@ public final class Main {
     public static void main(String[] args) {
 
 
-        List<Integer> nums = new ArrayList<>();
-        System.out.println(nums);
-        nums.add(1);
+        // List<Integer> nums = new ArrayList<>();
+        // System.out.println(nums);
+        // nums.add(1);
+        // System.out.println(nums);
+
+        // List<Integer> nums2 = List.of(1,2,3);
+        // List<Integer> more = Stream.concat(nums2.stream(), Stream.of(4)).toList();
+        // System.out.println(more);
+        // System.out.println(nums2);
+
+        Function<Integer, Integer> square = x -> x * x;
+        Function<Integer, Integer> add5 = x -> x + 5;
+        Function<Integer, Integer> addThing = x -> x + 1;
+
+        int t = 8;
+        System.out.println(square.apply(t));
+        System.out.println(t);
+
+        List<Integer> nums = List.of(1, 2, 3, 4, 5);
+
+        List<Integer> squaresFP = 
+            nums.stream().map(x->x*x).map(x->x+5).toList();
+        System.out.println("Squares (FP): " + squaresFP);
         System.out.println(nums);
 
-        List<Integer> nums2 = List.of(1,2,3);
-        List<Integer> more = Stream.concat(nums2.stream(), Stream.of(4)).toList();
-        System.out.println(more);
-        System.out.println(nums2);
+        List<Integer> squares = new ArrayList<>();
+
+        for(int x : nums){
+            squares.add(x*x);
+        }
+
+        System.out.println("Squares (imperative): " + squares);
+    
+
+        Function<Integer, Integer> squareOld = new Function<Integer, Integer>(){
+            @Override
+            public Integer apply(Integer x){
+                return x * x;
+            }
+        };   
+
+        System.out.println(squareOld.apply(5));
+        
+
         // int x = 5; 
         // x = x + 1;
         // System.out.println("x is now: " + x);
@@ -407,6 +443,7 @@ public final class Main {
         //process(new ArrayList<Integer>());
 
 }
+
 
 
         int square(int x){
