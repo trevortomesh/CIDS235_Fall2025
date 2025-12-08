@@ -5,11 +5,79 @@ import java.util.ArrayList;
 import java.util.GregorianCalendar;
 import java.util.List;
 import java.util.Calendar;
+import java.util.Comparator;
 public final class Main {
 
     int total = 0;
     public static void main(String[] args) {
 
+
+
+
+        Function<Integer, Integer> f = x -> x * 2;
+
+        List<Integer> list = List.of(1,2,3,4,5);
+        
+        for(int i = 0; i < list.size(); i++){
+            if(list.get(i) % 2 == 0){
+                System.out.println(list.get(i));
+            }
+        }
+
+        list.stream()
+            .filter(x -> x % 2 == 0)
+            .forEach(System.out::println);
+
+         List<Integer> numbers = List.of(1,2,3,4,5);
+
+         List<Integer> evens = 
+            numbers.stream()
+                .filter(x -> x % 2 == 0)
+                .toList();
+
+        System.out.println(evens);
+
+        int sum = numbers.stream()
+                    .reduce(0, (a,b) -> a+b);
+        
+        System.out.println(sum);
+
+        int sum2 = numbers.stream().mapToInt(x -> x).sum();
+
+        System.out.println(sum2);
+
+        System.out.println(numbers);
+
+        List<Integer> messy = List.of(3,9,0,12,4,5,11,1,99);
+
+        List<Integer> sorted = 
+            messy.stream()
+            .sorted()
+            .toList();
+
+        List<Integer> sorted2 = 
+            messy.stream()
+            .sorted(Comparator.reverseOrder())
+            .toList();
+
+        System.out.println("messy is: " + messy);
+        System.out.println("sorted is: " + sorted);
+        System.out.println("sorted2 is: " + sorted2);
+
+        // List<Integer> squares = 
+        //     numbers.stream().
+        //     map(x -> x* x).
+        //     toList();
+        // System.out.println(squares);
+
+        // List<String> words = List.of("apple", "banana", "cherry");
+
+        // List<Integer> lengths = 
+        //     words.stream()
+        //     .map(word -> word.length())
+        //     .toList();
+        
+        //     System.out.println(lengths);
 
         // List<Integer> nums = new ArrayList<>();
         // System.out.println(nums);
@@ -21,28 +89,28 @@ public final class Main {
         // System.out.println(more);
         // System.out.println(nums2);
 
-        Function<Integer, Integer> square = x -> x * x;
-        Function<Integer, Integer> add5 = x -> x + 5;
-        Function<Integer, Integer> addThing = x -> x + 1;
+        // Function<Integer, Integer> square = x -> x * x;
+        // Function<Integer, Integer> add5 = x -> x + 5;
+        // Function<Integer, Integer> addThing = x -> x + 1;
 
-        int t = 8;
-        System.out.println(square.apply(t));
-        System.out.println(t);
+        // int t = 8;
+        // System.out.println(square.apply(t));
+        // System.out.println(t);
 
-        List<Integer> nums = List.of(1, 2, 3, 4, 5);
+        // List<Integer> nums = List.of(1, 2, 3, 4, 5);
 
-        List<Integer> squaresFP = 
-            nums.stream().map(x->x*x).map(x->x+5).toList();
-        System.out.println("Squares (FP): " + squaresFP);
-        System.out.println(nums);
+        // List<Integer> squaresFP = 
+        //     nums.stream().map(x->x*x).map(x->x+5).toList();
+        // System.out.println("Squares (FP): " + squaresFP);
+        // System.out.println(nums);
 
-        List<Integer> squares = new ArrayList<>();
+        // List<Integer> squares = new ArrayList<>();
 
-        for(int x : nums){
-            squares.add(x*x);
-        }
+        // for(int x : nums){
+        //     squares.add(x*x);
+        // }
 
-        System.out.println("Squares (imperative): " + squares);
+        // System.out.println("Squares (imperative): " + squares);
     
 
         Function<Integer, Integer> squareOld = new Function<Integer, Integer>(){
