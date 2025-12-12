@@ -6,63 +6,77 @@ import java.util.GregorianCalendar;
 import java.util.List;
 import java.util.Calendar;
 import java.util.Comparator;
+import java.lang.Math;
 public final class Main {
 
     int total = 0;
     public static void main(String[] args) {
 
+        Filter filter = new Filter();
+        HigherOrderExample ho = new HigherOrderExample();
 
+        Function<Integer, Integer> square = x -> x * x;
 
+        System.out.println(square.apply(5));
 
-        Function<Integer, Integer> f = x -> x * 2;
+        List<Integer> numbers = List.of(1,2,3,4,5);
+        List<Integer> evens = filter.filter(numbers, x -> x % 2 == 0);
+        List<Integer> big = filter.filter(numbers, x -> x > 3);
 
-        List<Integer> list = List.of(1,2,3,4,5);
-        
-        for(int i = 0; i < list.size(); i++){
-            if(list.get(i) % 2 == 0){
-                System.out.println(list.get(i));
-            }
-        }
-
-        list.stream()
-            .filter(x -> x % 2 == 0)
-            .forEach(System.out::println);
-
-         List<Integer> numbers = List.of(1,2,3,4,5);
-
-         List<Integer> evens = 
-            numbers.stream()
-                .filter(x -> x % 2 == 0)
-                .toList();
-
+        List<Integer> squares = ho.applyToAll(numbers, x -> x*x*x);
         System.out.println(evens);
-
-        int sum = numbers.stream()
-                    .reduce(0, (a,b) -> a+b);
-        
-        System.out.println(sum);
-
-        int sum2 = numbers.stream().mapToInt(x -> x).sum();
-
-        System.out.println(sum2);
-
+        System.out.println(big);
         System.out.println(numbers);
 
-        List<Integer> messy = List.of(3,9,0,12,4,5,11,1,99);
+        // Function<Integer, Integer> f = x -> x * 2;
 
-        List<Integer> sorted = 
-            messy.stream()
-            .sorted()
-            .toList();
+        // List<Integer> list = List.of(1,2,3,4,5);
+        
+        // for(int i = 0; i < list.size(); i++){
+        //     if(list.get(i) % 2 == 0){
+        //         System.out.println(list.get(i));
+        //     }
+        // }
 
-        List<Integer> sorted2 = 
-            messy.stream()
-            .sorted(Comparator.reverseOrder())
-            .toList();
+        // list.stream()
+        //     .filter(x -> x % 2 == 0)
+        //     .forEach(System.out::println);
 
-        System.out.println("messy is: " + messy);
-        System.out.println("sorted is: " + sorted);
-        System.out.println("sorted2 is: " + sorted2);
+        //  List<Integer> numbers = List.of(1,2,3,4,5);
+
+        //  List<Integer> evens = 
+        //     numbers.stream()
+        //         .filter(x -> x % 2 == 0)
+        //         .toList();
+
+        // System.out.println(evens);
+
+        // int sum = numbers.stream()
+        //             .reduce(0, (a,b) -> a+b);
+        
+        // System.out.println(sum);
+
+        // int sum2 = numbers.stream().mapToInt(x -> x).sum();
+
+        // System.out.println(sum2);
+
+        // System.out.println(numbers);
+
+        // List<Integer> messy = List.of(3,9,0,12,4,5,11,1,99);
+
+        // List<Integer> sorted = 
+        //     messy.stream()
+        //     .sorted()
+        //     .toList();
+
+        // List<Integer> sorted2 = 
+        //     messy.stream()
+        //     .sorted(Comparator.reverseOrder())
+        //     .toList();
+
+        // System.out.println("messy is: " + messy);
+        // System.out.println("sorted is: " + sorted);
+        // System.out.println("sorted2 is: " + sorted2);
 
         // List<Integer> squares = 
         //     numbers.stream().
@@ -113,14 +127,14 @@ public final class Main {
         // System.out.println("Squares (imperative): " + squares);
     
 
-        Function<Integer, Integer> squareOld = new Function<Integer, Integer>(){
-            @Override
-            public Integer apply(Integer x){
-                return x * x;
-            }
-        };   
+        // Function<Integer, Integer> squareOld = new Function<Integer, Integer>(){
+        //     @Override
+        //     public Integer apply(Integer x){
+        //         return x * x;
+        //     }
+        // };   
 
-        System.out.println(squareOld.apply(5));
+        // System.out.println(squareOld.apply(5));
         
 
         // int x = 5; 
@@ -511,6 +525,8 @@ public final class Main {
         //process(new ArrayList<Integer>());
 
 }
+
+
 
 
 
